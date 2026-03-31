@@ -1,6 +1,6 @@
 import nc from "next-connect";
-import { dbConnect } from "../../../lib/mongodb";
-import Contact from "../../../models/Contact";
+import { dbConnect } from "../../lib/mongodb";
+import Contact from "../../models/Contact";
 
 async function mockSendEmail({ to, subject, text }) {
   console.log("📧 EMAIL →", { to, subject, text });

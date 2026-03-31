@@ -33,13 +33,14 @@ export default function AdminServices() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800 p-8">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Manage Services</h2>
-        <Link href="/admin/dashboard/services/add">
-          <a className="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
-            <FaPlus className="mr-2" /> Add Service
-          </a>
+        <Link
+          href="/admin/dashboard/services/add"
+          className="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
+
+          <FaPlus className="mr-2" />Add Service
+                    
         </Link>
       </div>
-
       {loading ? <p>Loading…</p> : (
         <table className="min-w-full bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
           <thead className="bg-gray-200 dark:bg-gray-700">
@@ -55,8 +56,10 @@ export default function AdminServices() {
                 <td className="p-2">{s.title}</td>
                 <td className="p-2">{s.category}</td>
                 <td className="p-2 flex space-x-2">
-                  <Link href={`/admin/dashboard/services/edit?id=${s._id}`}>
-                    <a className="text-primary"><FaEdit /></a>
+                  <Link
+                    href={`/admin/dashboard/services/edit?id=${s._id}`}
+                    className="text-primary">
+                    <FaEdit />
                   </Link>
                   <button onClick={() => deleteService(s._id)} className="text-red-600"><FaTrash /></button>
                 </td>

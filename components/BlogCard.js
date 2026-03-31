@@ -10,8 +10,8 @@ export default function BlogCard({ post }) {
         <Image src={imageUrl} alt={title} width={800} height={400} className="rounded mb-4" />
       )}
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">By {author}</p>
-      <Link href={`/blog/${_id}`}>
-        <a className="text-primary font-semibold">Read more →</a>
+      <Link href={`/blog/${_id}`} className="text-primary font-semibold">
+        Read more →
       </Link>
     </div>
   );

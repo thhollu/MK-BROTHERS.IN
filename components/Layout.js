@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode='wait'>
         <motion.main
           key={router.route}
           initial={{ opacity: 0, y: 20 }}

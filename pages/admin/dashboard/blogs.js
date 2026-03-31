@@ -33,13 +33,14 @@ export default function AdminBlogs() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800 p-8">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Manage Blog</h2>
-        <Link href="/admin/dashboard/blogs/add">
-          <a className="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
-            <FaPlus className="mr-2" /> Add Post
-          </a>
+        <Link
+          href="/admin/dashboard/blogs/add"
+          className="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
+
+          <FaPlus className="mr-2" />Add Post
+                    
         </Link>
       </div>
-
       {loading ? <p>Loading…</p> : (
         <table className="min-w-full bg-white dark:bg-gray-900 rounded-lg overflow-hidden">
           <thead className="bg-gray-200 dark:bg-gray-700">
@@ -53,8 +54,8 @@ export default function AdminBlogs() {
               <tr key={p._id} className="border-b border-gray-200 dark:border-gray-700">
                 <td className="p-2">{p.title}</td>
                 <td className="p-2 flex space-x-2">
-                  <Link href={`/admin/dashboard/blogs/edit?id=${p._id}`}>
-                    <a className="text-primary"><FaEdit /></a>
+                  <Link href={`/admin/dashboard/blogs/edit?id=${p._id}`} className="text-primary">
+                    <FaEdit />
                   </Link>
                   <button onClick={() => deletePost(p._id)} className="text-red-600"><FaTrash /></button>
                 </td>

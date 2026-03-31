@@ -38,10 +38,12 @@ export default function Career() {
                 <h2 className="text-2xl font-semibold mb-2">{job.jobTitle}</h2>
                 <p className="mb-2">{job.location}</p>
                 <p className="mb-4">{job.description}</p>
-                <Link href={`/career/apply?jobId=${job._id}`}>
-                  <a className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
+                <Link
+                  href={`/career/apply?jobId=${job._id}`}
+                  className="bg-primary text-white px-4 py-2 rounded hover:bg-primary/80">
+                  
                     Apply Now
-                  </a>
+                  
                 </Link>
               </div>
             ))}

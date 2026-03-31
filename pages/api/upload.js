@@ -1,7 +1,7 @@
 import nc from "next-connect";
 import multer from "multer";
 import path from "path";
-import { withAuth } from "../../../middleware/auth";
+import { withAuth } from "../../middleware/auth";
 
 const upload = multer({
   storage: multer.diskStorage({

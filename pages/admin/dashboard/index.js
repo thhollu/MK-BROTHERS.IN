@@ -25,14 +25,16 @@ export default function Dashboard() {
           <FaSignOutAlt className="mr-1" /> Logout
         </button>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {sections.map((s) => (
-          <Link key={s.href} href={s.href}>
-            <a className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
-              <div className="mb-4">{s.icon}</div>
-              <p className="text-xl font-semibold">{s.label}</p>
-            </a>
+          <Link
+            key={s.href}
+            href={s.href}
+            className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
+
+            <div className="mb-4">{s.icon}</div>
+            <p className="text-xl font-semibold">{s.label}</p>
+
           </Link>
         ))}
       </div>

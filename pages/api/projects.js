@@ -1,7 +1,7 @@
 import nc from "next-connect";
-import { dbConnect } from "../../../lib/mongodb";
-import Project from "../../../models/Project";
-import { withAuth } from "../../../middleware/auth";
+import { dbConnect } from "../../lib/mongodb";
+import Project from "../../models/Project";
+import { withAuth } from "../../middleware/auth";
 
 const handler = nc()
   .use(async (req, res, next) => {

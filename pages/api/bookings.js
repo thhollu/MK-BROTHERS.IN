@@ -1,6 +1,6 @@
 import nc from "next-connect";
-import { dbConnect } from "../../../lib/mongodb";
-import Booking from "../../../models/Booking";
+import { dbConnect } from "../../lib/mongodb";
+import Booking from "../../models/Booking";
 
 const handler = nc()
   .use(async (req, res, next) => {
